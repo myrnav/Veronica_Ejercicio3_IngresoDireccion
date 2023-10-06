@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             groupBoxDireccion = new GroupBox();
+            buttonCancelar_GroupBoxdireccion = new Button();
+            buttonOK_GroupBoxdireccion = new Button();
             textBoxDepartamento = new TextBox();
             label4 = new Label();
             textBoxPiso = new TextBox();
@@ -37,33 +39,28 @@
             label2 = new Label();
             textBoxCalle = new TextBox();
             label1 = new Label();
-            groupBoxPaises = new GroupBox();
-            comboBoxPaises = new ComboBox();
-            groupBoxProvincia = new GroupBox();
-            comboBoxProvincia = new ComboBox();
-            groupBoxRegion = new GroupBox();
-            comboBoxRegion = new ComboBox();
+            groupBoxEdicionPais = new GroupBox();
+            buttonCancelar_GroupBoxEdicion2 = new Button();
             groupBoxLocalidad = new GroupBox();
             comboBox1 = new ComboBox();
-            buttonOK_GroupBoxdireccion = new Button();
-            buttonCancelar_GroupBoxdireccion = new Button();
-            buttonOK_GroupBoxPais = new Button();
-            buttonCancelar_GroupBoxPais = new Button();
-            buttonCancelar_GroupBoxProvincia = new Button();
-            buttonOK_GroupBoxProvincia = new Button();
-            buttonCancelar_GroupBoxRegion = new Button();
-            buttonOK_GroupBoxRegion = new Button();
-            buttonCancelar_GroupBoxLocalidad = new Button();
-            buttonOK_GroupBoxLocalidad = new Button();
+            buttonOK_GroupBoxEdicion2 = new Button();
+            groupBoxRegion = new GroupBox();
+            comboBoxRegion = new ComboBox();
+            groupBoxProvincia = new GroupBox();
+            comboBoxProvincia = new ComboBox();
+            groupBoxPaises = new GroupBox();
+            comboBoxPaises = new ComboBox();
             groupBoxDireccion.SuspendLayout();
-            groupBoxPaises.SuspendLayout();
-            groupBoxProvincia.SuspendLayout();
-            groupBoxRegion.SuspendLayout();
+            groupBoxEdicionPais.SuspendLayout();
             groupBoxLocalidad.SuspendLayout();
+            groupBoxRegion.SuspendLayout();
+            groupBoxProvincia.SuspendLayout();
+            groupBoxPaises.SuspendLayout();
             SuspendLayout();
             // 
             // groupBoxDireccion
             // 
+            groupBoxDireccion.BackColor = SystemColors.GradientInactiveCaption;
             groupBoxDireccion.Controls.Add(buttonCancelar_GroupBoxdireccion);
             groupBoxDireccion.Controls.Add(buttonOK_GroupBoxdireccion);
             groupBoxDireccion.Controls.Add(textBoxDepartamento);
@@ -76,10 +73,33 @@
             groupBoxDireccion.Controls.Add(label1);
             groupBoxDireccion.Location = new Point(28, 29);
             groupBoxDireccion.Name = "groupBoxDireccion";
-            groupBoxDireccion.Size = new Size(399, 516);
+            groupBoxDireccion.Size = new Size(399, 550);
             groupBoxDireccion.TabIndex = 0;
             groupBoxDireccion.TabStop = false;
             groupBoxDireccion.Text = "Datos de Direccion";
+            // 
+            // buttonCancelar_GroupBoxdireccion
+            // 
+            buttonCancelar_GroupBoxdireccion.Cursor = Cursors.Hand;
+            buttonCancelar_GroupBoxdireccion.Font = new Font("Sitka Subheading", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            buttonCancelar_GroupBoxdireccion.Location = new Point(251, 275);
+            buttonCancelar_GroupBoxdireccion.Name = "buttonCancelar_GroupBoxdireccion";
+            buttonCancelar_GroupBoxdireccion.Size = new Size(129, 60);
+            buttonCancelar_GroupBoxdireccion.TabIndex = 9;
+            buttonCancelar_GroupBoxdireccion.Text = "Cancelar";
+            buttonCancelar_GroupBoxdireccion.UseVisualStyleBackColor = true;
+            // 
+            // buttonOK_GroupBoxdireccion
+            // 
+            buttonOK_GroupBoxdireccion.Cursor = Cursors.Hand;
+            buttonOK_GroupBoxdireccion.Font = new Font("Sitka Banner", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonOK_GroupBoxdireccion.ImageKey = "(ninguna)";
+            buttonOK_GroupBoxdireccion.Location = new Point(251, 183);
+            buttonOK_GroupBoxdireccion.Name = "buttonOK_GroupBoxdireccion";
+            buttonOK_GroupBoxdireccion.Size = new Size(129, 60);
+            buttonOK_GroupBoxdireccion.TabIndex = 8;
+            buttonOK_GroupBoxdireccion.Text = "OK";
+            buttonOK_GroupBoxdireccion.UseVisualStyleBackColor = true;
             // 
             // textBoxDepartamento
             // 
@@ -145,75 +165,38 @@
             label1.TabIndex = 0;
             label1.Text = "Calle";
             // 
-            // groupBoxPaises
+            // groupBoxEdicionPais
             // 
-            groupBoxPaises.Controls.Add(buttonCancelar_GroupBoxPais);
-            groupBoxPaises.Controls.Add(buttonOK_GroupBoxPais);
-            groupBoxPaises.Controls.Add(comboBoxPaises);
-            groupBoxPaises.Location = new Point(446, 29);
-            groupBoxPaises.Name = "groupBoxPaises";
-            groupBoxPaises.Size = new Size(463, 122);
-            groupBoxPaises.TabIndex = 1;
-            groupBoxPaises.TabStop = false;
-            groupBoxPaises.Text = "Paises";
+            groupBoxEdicionPais.BackColor = SystemColors.GradientInactiveCaption;
+            groupBoxEdicionPais.Controls.Add(buttonCancelar_GroupBoxEdicion2);
+            groupBoxEdicionPais.Controls.Add(groupBoxLocalidad);
+            groupBoxEdicionPais.Controls.Add(buttonOK_GroupBoxEdicion2);
+            groupBoxEdicionPais.Controls.Add(groupBoxRegion);
+            groupBoxEdicionPais.Controls.Add(groupBoxProvincia);
+            groupBoxEdicionPais.Controls.Add(groupBoxPaises);
+            groupBoxEdicionPais.Location = new Point(447, 29);
+            groupBoxEdicionPais.Name = "groupBoxEdicionPais";
+            groupBoxEdicionPais.Size = new Size(522, 550);
+            groupBoxEdicionPais.TabIndex = 1;
+            groupBoxEdicionPais.TabStop = false;
             // 
-            // comboBoxPaises
+            // buttonCancelar_GroupBoxEdicion2
             // 
-            comboBoxPaises.FormattingEnabled = true;
-            comboBoxPaises.Location = new Point(35, 46);
-            comboBoxPaises.Name = "comboBoxPaises";
-            comboBoxPaises.Size = new Size(200, 33);
-            comboBoxPaises.TabIndex = 0;
-            // 
-            // groupBoxProvincia
-            // 
-            groupBoxProvincia.Controls.Add(buttonCancelar_GroupBoxProvincia);
-            groupBoxProvincia.Controls.Add(comboBoxProvincia);
-            groupBoxProvincia.Controls.Add(buttonOK_GroupBoxProvincia);
-            groupBoxProvincia.Location = new Point(446, 157);
-            groupBoxProvincia.Name = "groupBoxProvincia";
-            groupBoxProvincia.Size = new Size(463, 122);
-            groupBoxProvincia.TabIndex = 2;
-            groupBoxProvincia.TabStop = false;
-            groupBoxProvincia.Text = "Provincia";
-            // 
-            // comboBoxProvincia
-            // 
-            comboBoxProvincia.FormattingEnabled = true;
-            comboBoxProvincia.Location = new Point(35, 46);
-            comboBoxProvincia.Name = "comboBoxProvincia";
-            comboBoxProvincia.Size = new Size(200, 33);
-            comboBoxProvincia.TabIndex = 0;
-            // 
-            // groupBoxRegion
-            // 
-            groupBoxRegion.Controls.Add(buttonCancelar_GroupBoxRegion);
-            groupBoxRegion.Controls.Add(comboBoxRegion);
-            groupBoxRegion.Controls.Add(buttonOK_GroupBoxRegion);
-            groupBoxRegion.Location = new Point(446, 285);
-            groupBoxRegion.Name = "groupBoxRegion";
-            groupBoxRegion.Size = new Size(463, 122);
-            groupBoxRegion.TabIndex = 3;
-            groupBoxRegion.TabStop = false;
-            groupBoxRegion.Text = "Region";
-            // 
-            // comboBoxRegion
-            // 
-            comboBoxRegion.FormattingEnabled = true;
-            comboBoxRegion.Location = new Point(35, 46);
-            comboBoxRegion.Name = "comboBoxRegion";
-            comboBoxRegion.Size = new Size(200, 33);
-            comboBoxRegion.TabIndex = 0;
+            buttonCancelar_GroupBoxEdicion2.Font = new Font("Yu Gothic UI Semilight", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            buttonCancelar_GroupBoxEdicion2.Location = new Point(387, 275);
+            buttonCancelar_GroupBoxEdicion2.Name = "buttonCancelar_GroupBoxEdicion2";
+            buttonCancelar_GroupBoxEdicion2.Size = new Size(129, 60);
+            buttonCancelar_GroupBoxEdicion2.TabIndex = 11;
+            buttonCancelar_GroupBoxEdicion2.Text = "Cancelar";
+            buttonCancelar_GroupBoxEdicion2.UseVisualStyleBackColor = true;
             // 
             // groupBoxLocalidad
             // 
-            groupBoxLocalidad.Controls.Add(buttonCancelar_GroupBoxLocalidad);
             groupBoxLocalidad.Controls.Add(comboBox1);
-            groupBoxLocalidad.Controls.Add(buttonOK_GroupBoxLocalidad);
-            groupBoxLocalidad.Location = new Point(446, 423);
+            groupBoxLocalidad.Location = new Point(17, 420);
             groupBoxLocalidad.Name = "groupBoxLocalidad";
-            groupBoxLocalidad.Size = new Size(463, 122);
-            groupBoxLocalidad.TabIndex = 4;
+            groupBoxLocalidad.Size = new Size(338, 122);
+            groupBoxLocalidad.TabIndex = 8;
             groupBoxLocalidad.TabStop = false;
             groupBoxLocalidad.Text = "Localidad";
             // 
@@ -225,115 +208,91 @@
             comboBox1.Size = new Size(200, 33);
             comboBox1.TabIndex = 0;
             // 
-            // buttonOK_GroupBoxdireccion
+            // buttonOK_GroupBoxEdicion2
             // 
-            buttonOK_GroupBoxdireccion.Location = new Point(251, 183);
-            buttonOK_GroupBoxdireccion.Name = "buttonOK_GroupBoxdireccion";
-            buttonOK_GroupBoxdireccion.Size = new Size(129, 60);
-            buttonOK_GroupBoxdireccion.TabIndex = 8;
-            buttonOK_GroupBoxdireccion.Text = "OK";
-            buttonOK_GroupBoxdireccion.UseVisualStyleBackColor = true;
+            buttonOK_GroupBoxEdicion2.Font = new Font("Yu Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            buttonOK_GroupBoxEdicion2.Image = Properties.Resources.OK;
+            buttonOK_GroupBoxEdicion2.ImageAlign = ContentAlignment.MiddleRight;
+            buttonOK_GroupBoxEdicion2.Location = new Point(387, 59);
+            buttonOK_GroupBoxEdicion2.Name = "buttonOK_GroupBoxEdicion2";
+            buttonOK_GroupBoxEdicion2.Size = new Size(129, 184);
+            buttonOK_GroupBoxEdicion2.TabIndex = 10;
+            buttonOK_GroupBoxEdicion2.Text = "OK";
+            buttonOK_GroupBoxEdicion2.UseVisualStyleBackColor = true;
             // 
-            // buttonCancelar_GroupBoxdireccion
+            // groupBoxRegion
             // 
-            buttonCancelar_GroupBoxdireccion.Location = new Point(251, 275);
-            buttonCancelar_GroupBoxdireccion.Name = "buttonCancelar_GroupBoxdireccion";
-            buttonCancelar_GroupBoxdireccion.Size = new Size(129, 60);
-            buttonCancelar_GroupBoxdireccion.TabIndex = 9;
-            buttonCancelar_GroupBoxdireccion.Text = "Cancelar";
-            buttonCancelar_GroupBoxdireccion.UseVisualStyleBackColor = true;
+            groupBoxRegion.Controls.Add(comboBoxRegion);
+            groupBoxRegion.Location = new Point(17, 282);
+            groupBoxRegion.Name = "groupBoxRegion";
+            groupBoxRegion.Size = new Size(338, 122);
+            groupBoxRegion.TabIndex = 7;
+            groupBoxRegion.TabStop = false;
+            groupBoxRegion.Text = "Region";
             // 
-            // buttonOK_GroupBoxPais
+            // comboBoxRegion
             // 
-            buttonOK_GroupBoxPais.Location = new Point(317, 17);
-            buttonOK_GroupBoxPais.Name = "buttonOK_GroupBoxPais";
-            buttonOK_GroupBoxPais.Size = new Size(98, 39);
-            buttonOK_GroupBoxPais.TabIndex = 1;
-            buttonOK_GroupBoxPais.Text = "OK";
-            buttonOK_GroupBoxPais.UseVisualStyleBackColor = true;
+            comboBoxRegion.FormattingEnabled = true;
+            comboBoxRegion.Location = new Point(35, 46);
+            comboBoxRegion.Name = "comboBoxRegion";
+            comboBoxRegion.Size = new Size(200, 33);
+            comboBoxRegion.TabIndex = 0;
             // 
-            // buttonCancelar_GroupBoxPais
+            // groupBoxProvincia
             // 
-            buttonCancelar_GroupBoxPais.Location = new Point(317, 77);
-            buttonCancelar_GroupBoxPais.Name = "buttonCancelar_GroupBoxPais";
-            buttonCancelar_GroupBoxPais.Size = new Size(98, 39);
-            buttonCancelar_GroupBoxPais.TabIndex = 2;
-            buttonCancelar_GroupBoxPais.Text = "Cancelar";
-            buttonCancelar_GroupBoxPais.UseVisualStyleBackColor = true;
+            groupBoxProvincia.Controls.Add(comboBoxProvincia);
+            groupBoxProvincia.Location = new Point(17, 154);
+            groupBoxProvincia.Name = "groupBoxProvincia";
+            groupBoxProvincia.Size = new Size(338, 122);
+            groupBoxProvincia.TabIndex = 6;
+            groupBoxProvincia.TabStop = false;
+            groupBoxProvincia.Text = "Provincia";
             // 
-            // buttonCancelar_GroupBoxProvincia
+            // comboBoxProvincia
             // 
-            buttonCancelar_GroupBoxProvincia.Location = new Point(317, 80);
-            buttonCancelar_GroupBoxProvincia.Name = "buttonCancelar_GroupBoxProvincia";
-            buttonCancelar_GroupBoxProvincia.Size = new Size(98, 39);
-            buttonCancelar_GroupBoxProvincia.TabIndex = 4;
-            buttonCancelar_GroupBoxProvincia.Text = "Cancelar";
-            buttonCancelar_GroupBoxProvincia.UseVisualStyleBackColor = true;
+            comboBoxProvincia.FormattingEnabled = true;
+            comboBoxProvincia.Location = new Point(35, 46);
+            comboBoxProvincia.Name = "comboBoxProvincia";
+            comboBoxProvincia.Size = new Size(200, 33);
+            comboBoxProvincia.TabIndex = 0;
             // 
-            // buttonOK_GroupBoxProvincia
+            // groupBoxPaises
             // 
-            buttonOK_GroupBoxProvincia.Location = new Point(317, 20);
-            buttonOK_GroupBoxProvincia.Name = "buttonOK_GroupBoxProvincia";
-            buttonOK_GroupBoxProvincia.Size = new Size(98, 39);
-            buttonOK_GroupBoxProvincia.TabIndex = 3;
-            buttonOK_GroupBoxProvincia.Text = "OK";
-            buttonOK_GroupBoxProvincia.UseVisualStyleBackColor = true;
+            groupBoxPaises.Controls.Add(comboBoxPaises);
+            groupBoxPaises.Location = new Point(17, 26);
+            groupBoxPaises.Name = "groupBoxPaises";
+            groupBoxPaises.Size = new Size(338, 122);
+            groupBoxPaises.TabIndex = 5;
+            groupBoxPaises.TabStop = false;
+            groupBoxPaises.Text = "Paises";
             // 
-            // buttonCancelar_GroupBoxRegion
+            // comboBoxPaises
             // 
-            buttonCancelar_GroupBoxRegion.Location = new Point(317, 79);
-            buttonCancelar_GroupBoxRegion.Name = "buttonCancelar_GroupBoxRegion";
-            buttonCancelar_GroupBoxRegion.Size = new Size(98, 39);
-            buttonCancelar_GroupBoxRegion.TabIndex = 6;
-            buttonCancelar_GroupBoxRegion.Text = "Cancelar";
-            buttonCancelar_GroupBoxRegion.UseVisualStyleBackColor = true;
-            // 
-            // buttonOK_GroupBoxRegion
-            // 
-            buttonOK_GroupBoxRegion.Location = new Point(317, 19);
-            buttonOK_GroupBoxRegion.Name = "buttonOK_GroupBoxRegion";
-            buttonOK_GroupBoxRegion.Size = new Size(98, 39);
-            buttonOK_GroupBoxRegion.TabIndex = 5;
-            buttonOK_GroupBoxRegion.Text = "OK";
-            buttonOK_GroupBoxRegion.UseVisualStyleBackColor = true;
-            // 
-            // buttonCancelar_GroupBoxLocalidad
-            // 
-            buttonCancelar_GroupBoxLocalidad.Location = new Point(317, 77);
-            buttonCancelar_GroupBoxLocalidad.Name = "buttonCancelar_GroupBoxLocalidad";
-            buttonCancelar_GroupBoxLocalidad.Size = new Size(98, 39);
-            buttonCancelar_GroupBoxLocalidad.TabIndex = 8;
-            buttonCancelar_GroupBoxLocalidad.Text = "Cancelar";
-            buttonCancelar_GroupBoxLocalidad.UseVisualStyleBackColor = true;
-            // 
-            // buttonOK_GroupBoxLocalidad
-            // 
-            buttonOK_GroupBoxLocalidad.Location = new Point(317, 17);
-            buttonOK_GroupBoxLocalidad.Name = "buttonOK_GroupBoxLocalidad";
-            buttonOK_GroupBoxLocalidad.Size = new Size(98, 39);
-            buttonOK_GroupBoxLocalidad.TabIndex = 7;
-            buttonOK_GroupBoxLocalidad.Text = "OK";
-            buttonOK_GroupBoxLocalidad.UseVisualStyleBackColor = true;
+            comboBoxPaises.FormattingEnabled = true;
+            comboBoxPaises.Location = new Point(35, 46);
+            comboBoxPaises.Name = "comboBoxPaises";
+            comboBoxPaises.Size = new Size(200, 33);
+            comboBoxPaises.TabIndex = 0;
             // 
             // DireccionForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(921, 557);
-            Controls.Add(groupBoxLocalidad);
-            Controls.Add(groupBoxRegion);
-            Controls.Add(groupBoxProvincia);
-            Controls.Add(groupBoxPaises);
+            BackColor = SystemColors.ControlDarkDark;
+            ClientSize = new Size(981, 591);
+            Controls.Add(groupBoxEdicionPais);
             Controls.Add(groupBoxDireccion);
+            ForeColor = SystemColors.ActiveCaptionText;
             Name = "DireccionForm";
             Text = "Form1";
             Load += Form1_Load;
             groupBoxDireccion.ResumeLayout(false);
             groupBoxDireccion.PerformLayout();
-            groupBoxPaises.ResumeLayout(false);
-            groupBoxProvincia.ResumeLayout(false);
-            groupBoxRegion.ResumeLayout(false);
+            groupBoxEdicionPais.ResumeLayout(false);
             groupBoxLocalidad.ResumeLayout(false);
+            groupBoxRegion.ResumeLayout(false);
+            groupBoxProvincia.ResumeLayout(false);
+            groupBoxPaises.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -348,23 +307,18 @@
         private Label label2;
         private TextBox textBoxCalle;
         private Label label1;
-        private GroupBox groupBoxPaises;
-        private ComboBox comboBoxPaises;
-        private GroupBox groupBoxProvincia;
-        private ComboBox comboBoxProvincia;
-        private GroupBox groupBoxRegion;
-        private ComboBox comboBoxRegion;
-        private GroupBox groupBoxLocalidad;
-        private ComboBox comboBox1;
         private Button buttonCancelar_GroupBoxdireccion;
         private Button buttonOK_GroupBoxdireccion;
-        private Button buttonOK_GroupBoxPais;
-        private Button buttonCancelar_GroupBoxPais;
-        private Button buttonCancelar_GroupBoxProvincia;
-        private Button buttonOK_GroupBoxProvincia;
-        private Button buttonCancelar_GroupBoxRegion;
-        private Button buttonOK_GroupBoxRegion;
-        private Button buttonCancelar_GroupBoxLocalidad;
-        private Button buttonOK_GroupBoxLocalidad;
+        private GroupBox groupBoxEdicionPais;
+        private GroupBox groupBoxLocalidad;
+        private ComboBox comboBox1;
+        private GroupBox groupBoxRegion;
+        private ComboBox comboBoxRegion;
+        private GroupBox groupBoxProvincia;
+        private ComboBox comboBoxProvincia;
+        private GroupBox groupBoxPaises;
+        private ComboBox comboBoxPaises;
+        private Button buttonCancelar_GroupBoxEdicion2;
+        private Button buttonOK_GroupBoxEdicion2;
     }
 }
