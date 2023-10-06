@@ -100,6 +100,7 @@
             buttonOK_GroupBoxdireccion.TabIndex = 8;
             buttonOK_GroupBoxdireccion.Text = "OK";
             buttonOK_GroupBoxdireccion.UseVisualStyleBackColor = true;
+            buttonOK_GroupBoxdireccion.Click += buttonOK_GroupBoxdireccion_Click;
             // 
             // textBoxDepartamento
             // 
